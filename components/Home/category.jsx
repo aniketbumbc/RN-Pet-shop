@@ -12,6 +12,29 @@ import { firebasedb } from '../../config/FirebaseConfig';
 import Colors from '../../constants/Colors';
 
 export default function Category() {
+  const data = [
+    {
+      id: '1',
+      name: 'bird',
+      imageUrl: require('../../assets/images/001-robin.png'),
+    },
+    {
+      id: '2',
+      name: 'cat',
+      imageUrl: require('../../assets/images/002-cat.png'),
+    },
+    {
+      id: '3',
+      name: 'dog',
+      imageUrl: require('../../assets/images/003-shiba.png'),
+    },
+
+    {
+      id: '4',
+      name: 'fish',
+      imageUrl: require('../../assets/images/004-fish.png'),
+    },
+  ];
   const [categoryList, setCategotyList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('dog');
 
@@ -24,7 +47,7 @@ export default function Category() {
     const snapshot = await getDocs(collection(firebasedb, 'Category'));
 
     snapshot.forEach((doc) => {
-      setCategotyList((sliderList) => [...sliderList, doc.data()]);
+      setCategotyList(data);
     });
   };
 
@@ -51,7 +74,7 @@ export default function Category() {
                 ]}
               >
                 <Image
-                  source={{ uri: item?.imageUrl }}
+                  source={item?.imageUrl}
                   style={{ width: 40, height: 40 }}
                 />
               </View>
