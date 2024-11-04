@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 import Category from './category';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { firebasedb } from '../../config/FirebaseConfig';
