@@ -11,7 +11,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { firebasedb } from '../../config/FirebaseConfig';
 import Colors from '../../constants/Colors';
 
-export default function Category() {
+export default function Category({ category }) {
   const data = [
     {
       id: '1',
@@ -36,7 +36,7 @@ export default function Category() {
     },
   ];
   const [categoryList, setCategotyList] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('dog');
+  const [selectedCategory, setSelectedCategory] = useState('bird');
 
   useEffect(() => {
     getCategories();
@@ -63,7 +63,10 @@ export default function Category() {
         renderItem={({ item, index }) => (
           <TouchableOpacity
             style={{ flex: 1 }}
-            onPress={() => setSelectedCategory(item.name)}
+            onPress={() => {
+              setSelectedCategory(item.name);
+              category(item.name);
+            }}
           >
             <View style={{ flex: 1 }}>
               <View
