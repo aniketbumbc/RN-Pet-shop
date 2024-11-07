@@ -27,7 +27,7 @@ export default function PetSubInfoCard({ icon, title, value }) {
         />
       </View>
 
-      <View>
+      <View style={{ flex: 1 }}>
         <Text
           style={{
             fontFamily: 'outfit',
@@ -40,7 +40,7 @@ export default function PetSubInfoCard({ icon, title, value }) {
         <Text
           style={{
             fontFamily: 'outfit-medium',
-            fontSize: 20,
+            fontSize: 16,
           }}
         >
           {' '}

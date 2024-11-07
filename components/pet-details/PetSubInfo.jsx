@@ -7,7 +7,7 @@ export default function PetSubInfo() {
   return (
     <View
       style={{
-        padding: 20,
+        paddingHorizontal: 20,
       }}
     >
       <View
@@ -19,12 +19,12 @@ export default function PetSubInfo() {
         <PetSubInfoCard
           icon={require('../../assets/images/calendar.png')}
           title={'Age'}
-          value={4}
+          value={'4 Years'}
         />
         <PetSubInfoCard
           icon={require('../../assets/images/bone.png')}
           title={'Breed'}
-          value={'breed'}
+          value={'German sheford'}
         />
       </View>
 
@@ -35,14 +35,14 @@ export default function PetSubInfo() {
         }}
       >
         <PetSubInfoCard
-          icon={require('../../assets/images/calendar.png')}
-          title={'Age'}
-          value={4}
+          icon={require('../../assets/images/sex.png')}
+          title={'Sex'}
+          value={'Male'}
         />
         <PetSubInfoCard
-          icon={require('../../assets/images/bone.png')}
-          title={'Breed'}
-          value={'breed'}
+          icon={require('../../assets/images/weight.png')}
+          title={'Weight'}
+          value={'5 kg'}
         />
       </View>
     </View>
