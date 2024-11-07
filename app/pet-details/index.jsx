@@ -1,6 +1,7 @@
 import { useLocalSearchParams, useNavigation } from 'expo-router';
 import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, ScrollView } from 'react-native';
+import AboutPet from '../../components/pet-details/AboutPet';
 import PetInfo from '../../components/pet-details/PetInfo';
 import PetSubInfo from '../../components/pet-details/PetSubInfo';
 
@@ -17,16 +18,19 @@ export default function Index() {
 
   return (
     <View>
-      {/* pet info */}
+      <ScrollView>
+        {/* pet info */}
 
-      <PetInfo pet={pet} />
+        <PetInfo pet={pet} />
 
-      <PetSubInfo pet={pet} />
+        <PetSubInfo pet={pet} />
 
-      {/* pet properties */}
+        {/* pet properties */}
 
-      {/* owner details*/}
+        <AboutPet pet={pet} />
 
+        {/* owner details*/}
+      </ScrollView>
       {/* adopt me */}
     </View>
   );
