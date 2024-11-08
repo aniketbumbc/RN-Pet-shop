@@ -14,7 +14,7 @@ export default function AboutPet({ pet }) {
 
       <Text
         numberOfLines={readeMore ? 3 : 20}
-        style={{ fontFamily: 'out-fit', fontSize: 16 }}
+        style={{ fontFamily: 'outfit', fontSize: 16 }}
       >
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
         repudiandae, fuga ipsa laborum dicta est unde atque vero alias

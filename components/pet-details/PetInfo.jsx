@@ -40,7 +40,7 @@ export default function PetInfo({ pet }) {
         </View>
 
         <View>
-          <Ionicons name="heart-outline" size={34} color="red" />
+          <Ionicons name="heart-outline" size={34} color="black" />
         </View>
       </View>
     </View>
