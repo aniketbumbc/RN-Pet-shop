@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import Fontisto from '@expo/vector-icons/Fontisto';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function header() {
   return (
@@ -24,11 +24,11 @@ export default function header() {
           Mike Bun
         </Text>
       </View>
-      <Fontisto
-        name="picture"
-        size={24}
-        color="black"
-        style={{ width: 40, height: 40, borderRadius: 99 }}
+      <MaterialCommunityIcons
+        name="face-man-profile"
+        size={40}
+        color={Colors.PRIMARY}
+        style={{ width: 40, height: 40 }}
       />
     </View>
   );
